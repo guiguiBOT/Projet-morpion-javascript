@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC TAC TOE</title>
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@600&family=Quicksand:wght@300;400;500&family=Roboto:wght@100;500&family=Varela+Round&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1><img src="./assets/img/h1.png" alt="TIC TAC TOE game"></h1>
+        <div id="titleContainer">
+            <p class="letter" id="T1">T</p>
+            <p class="letter" id="I">I</p>
+            <p class="letter" id="C01">C</p>
+            <p>&nbsp;</p>
+            <p class="letter" id="T2">T</p>
+            <p class="letter" id="A">A</p>
+            <p class="letter" id="C02">C</p>
+            <p>&nbsp;</p>
+            <p class="letter" id="T3">T</p>
+            <p class="letter" id="O">O</p>
+            <p class="letter" id="E">E</p>
+        </div>
+        <nav class="navBar">
+            <div class="gameBtn" id="btn1">Morpion PvP</div>
+            <div class="gameBtn" id="btn2">Morpion PvC</div>
+            <div class="gameBtn" id="btn3">puissance4 PvP</div>
+            <div class="gameBtn" id="btn4">puissance4 PvC</div>
+            <div class="gameBtn" id="btn5">reset</div>
+        </nav>
+    </header>
+    <main>
+            <div id="board">
+            </div>
+    </main>
+    <footer>
+        <div id="scoreBoard">
+            <p id="displayWinner"></p>
+            <p>Player <span id="currentPlayer"></span> à vous de jouer</p>
+            <p>score player X : <span id="score1"></span></p>
+            <p>score player O : <span id="score2"></span></p>
+            <p>Matchs nuls : <span id="score3"></span></p>
+        </div>
+    </footer>
+
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

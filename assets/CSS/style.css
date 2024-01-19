@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    background-color: beige;
+    background-image: url(../img/modele-sans-couture-ecole-simple-jeu-morpion-fond-noir-blanc_172597-451.jpg);
+    font-family: 'Varela Round', sans-serif;
+}
+
+h1 img {
+    width: 0px;
+    height: 0px;
+}
+
+#titleContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#titleContainer p {
+    -webkit-text-stroke: 0.03em rgb(226, 225, 128);
+    text-align: center;
+    font-size: 4em;
+    color: rgb(99, 99, 99);
+    text-shadow: rgb(54, 54, 54) 0.1em 0.1em 0.2em
+}
+
+.navBar {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 10px;
+    font-size: 1.1em;
+    color: rgb(0, 0, 0);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+/*   ANIMATIONS */
+/* effet sur les lettres du titre */
+@keyframes scaling {
+    0% {
+        scale : 0.1;
+    }
+    50% {
+        scale: 1.15;
+    }
+    100% {
+        scale: 1;
+    }
+}
+#T1 {
+    animation-name: scaling;
+    animation-delay: 0s;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    transition: ease-out;
+}
+#I {
+    animation-name: scaling;
+    animation-delay: 0s;
+    animation-duration: 0.7s;
+    animation-iteration-count: 1;
+    transition: ease-out;
+}
+#C01 {
+    animation-name: scaling;
+    animation-delay: 0s;
+    animation-duration: 0.9s;
+    animation-iteration-count: 1;
+    transition: ease-out;
+}
+#T2 {
+    animation-name: scaling;
+    animation-delay: 0s;
+    animation-duration: 1.1s;
+    animation-iteration-count: 1;
+    transition: ease-out;
+}
+#A {
+    animation-name: scaling;
+    animation-delay: 0s;
+    animation-duration: 1.3s;
+    animation-iteration-count: 1;
+    transition: ease-out;
+}
+#C02 {
+    animation-name: scaling;
+    animation-delay: 0s;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    transition: ease-out;
+}
+#T3 {
+    animation-name: scaling;
+    animation-delay: 0s;
+    animation-duration: 1.7s;
+    animation-iteration-count: 1;
+    transition: ease-out;
+}
+#O {
+    animation-name: scaling;
+    animation-delay: 0s;
+    animation-duration: 1.9s;
+    animation-iteration-count: 1;
+    transition: ease-out;
+}
+#E {
+    animation-name: scaling;
+    animation-delay: 0s;
+    animation-duration: 2.1s;
+    animation-iteration-count: 1;
+    transition: ease-out;
+}
+
+/* Effet sur les boutons */
+#btn1 {
+    animation-name: scaling;
+    animation-delay: 0s;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    transition: ease-out;
+}
+#btn2 {
+    animation-name: scaling;
+    animation-delay: 0s;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    transition: ease-out;
+}
+#btn3 {
+    animation-name: scaling;
+    animation-delay: 0s;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    transition: ease-out;
+}
+#btn4 {
+    animation-name: scaling;
+    animation-delay: 0s;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    transition: ease-out;
+}
+#btn5 {
+    animation-name: scaling;
+    animation-delay: 0s;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    transition: ease-out;
+}
+
+#btn1:hover,
+#btn2:hover,
+#btn3:hover,
+#btn4:hover,
+#btn5:hover {
+    color: rgb(112, 112, 112);
+}
+
+#btn1:active,
+#btn2:active,
+#btn3:active,
+#btn4:active,
+#btn5:active {
+    color: rgb(255, 253, 129);
+    transition: 0.15s;
+}
+
+.gameBtn {
+    padding: 5px 10px;
+    color: rgb(243, 245, 128);
+    box-shadow: 5px 5px 10px #555555;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
+    border-radius: 8px;
+    border: 4px solid rgb(221, 219, 104);
+    background-color: rgb(146, 146, 146);
+    transition: 0.4s;
+}
+
+.gameBtn:hover {
+    /* background-color: rgb(187, 187, 187); */
+    background-color: #f8f8d7;
+    color: rgb(112, 112, 112);
+    cursor: pointer;
+}
+
+.gameBtn:active {
+    color: rgb(255, 252, 74);
+    border-color: rgb(255, 252, 74);
+    transition: 0.2s;
+}
+
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+#board {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    min-height: 400px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    font-size: 6em;
+    -webkit-text-stroke: 0.03em rgb(226, 225, 128);
+    color: rgb(129, 129, 129);
+    border: 1px solid;
+    border: 4px solid rgb(221, 219, 104);
+    border-radius: 5px;
+    background-color: #8a8a7c;
+    box-shadow: 5px 5px 10px #555555;
+    margin: 5px 5px 10px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* animation-name: scaling;
+    animation-delay: 0s;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    transition: ease-out; */
+}
+
+.cellP4 {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 3em;
+    -webkit-text-stroke: 0.03em rgb(226, 225, 128);
+    color: rgb(129, 129, 129);
+    border: 4px solid rgb(221, 219, 104);
+    border-radius: 5px;
+    background-color: #8a8a7c;
+    box-shadow: 5px 5px 10px #555555;
+    margin: 3px 3px 6px 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* animation-name: scaling;
+    animation-delay: 0s;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    transition: ease-out; */
+}
+
+#scoreBoard {
+    padding: 10px 30px;
+    color: rgb(243, 245, 128);
+    box-shadow: 5px 5px 10px #555555;
+    text-shadow: -1px -1px 1px rgba(255, 255, 255, .1), 1px 1px 1px rgba(0, 0, 0, .5);
+    border-radius: 8px;
+    border: 4px solid rgb(221, 219, 104);
+    background-color: rgb(146, 146, 146);
+    transition: 0.4s;
+    animation-name: scaling;
+    animation-delay: 0s;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    transition: ease-out;
+}
+
+@media screen and (max-width: 420px) {
+    .navBar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.1em;
+        color: rgb(0, 0, 0);
+    }
+
+    .gameBtn {
+        text-align: center;
+        width: 50%;
+    }
+
+    #titleContainer p {
+        font-size: 3em;
+    }
+
+    #cellP4 {
+        width: 45px;
+        height: 45px;
+        margin: 3px 3px 6px 3px;
+    }
+}
+
+@media screen and (max-width: 861px) {
+    .navBar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        font-size: 1.1em;
+        color: rgb(0, 0, 0);
+    }
+    .gameBtn {
+        text-align: center;
+        width: 50%;
+    }
+}
